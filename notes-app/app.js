@@ -1,8 +1,8 @@
-const validator = require("validator")
+const chalk = require("chalk")
 
-const getNotes = require("./notes.js")
+/* const getNotes = require("./notes.js")
 
-const result = getNodes()
+const result = getNodes() */
 
-console.log(result)
+console.log(chalk.blue("Success!"))
 
