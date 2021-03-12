@@ -8,7 +8,7 @@ geocode("Boston", (error, data) => {
     console.log("data", data)
 })
 
-forecast(-75.7088, 44.1545, (error, data) => {
+forecast(34.0522, -118.243683, (error, data) => {
     console.log("error", error)
     console.log("data", data)
 })

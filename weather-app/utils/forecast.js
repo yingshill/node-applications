@@ -16,15 +16,15 @@ request({ url: url, json: true}, (error, response) => {
     
 })
  */
-const forecast = (longitude, latitude, callback) => {
-    const url = "http://api.weatherstack.com/current?access_key=1256e20d2ee38fbd9e7d895ffc24b06b&query=" + longitude + "," + latitude + "&units=f"
-    request({url:url, json: true}, (error, response) => {
+const forecast = (latitude, longitude, callback) => {
+    const url = "http://api.weatherstack.com/current?access_key=1256e20d2ee38fbd9e7d895ffc24b06b&query=" + latitude + "," + longitude + "&units=f"
+    request({ url: url, json: true}, (error, response) => {
         if (error) {
             callback("Unable to connect to local servers!", undefined)
         } else if (response.body.error) {
             callback("Unable to find location", undefined)
         } else {
-            callback(undefined, response.body.daily.data[0].summary + " It is currently " + response.body.current.temperature + " degrees out. There is a " + response.body.current.precip + "% chance of rain.")
+            callback(undefined, "It is currently " + response.body.current.temperature + " degrees out. There is a " + response.body.current.precip + "% chance of rain.")
         }
             
     })
