@@ -41,6 +41,20 @@ app.get("/weather", (req, res) => {
     res.send("weather page")
 })
 
+app.get("/help/*", (req, res) => {
+    res.render("404", {
+        title: "help page 404",
+        name: "Yingshi Liu",
+        errorMessage: " Help page not Found"
+    })
+})
+app.get("*", (req, res) => {
+    res.render("404", {
+        title: "404",
+        name: "Yingshi Liu",
+        errorMessage: "404 Not Found"
+    })
+})
 app.listen(3000, ()=> {
     console.log("server is up running.")
 })
