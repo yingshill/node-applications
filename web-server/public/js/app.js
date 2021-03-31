@@ -8,7 +8,7 @@ messageOne.textContent = ""
 weatherForm.addEventListener("submit", (e) => {
     e.preventDefault()
     const location = search.value
-    const url = "http://localhost:3000/weather?address=" + location
+    const url = "/weather?address=" + location
     messageOne.textContent = "Loading..."
     fetch(url).then((response) => {
         response.json().then((data) => {
