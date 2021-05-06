@@ -13,13 +13,8 @@ app.use(taskRouter)
 app.listen(port, () => {
     console.log('Server is up on port ' + port)
 })
+ 
 
-const Task = require('./models/task')
-const User = require('./models/user')
-
-const main = async () => {
-    const user = await User.findById('6088b88646e8b77a13c8f1ab')
-    await user.populate('tasks').execPopulate()
-    console.log(user.tasks)
-}
-main()
+/* to restart mongodb in terminal
+mac@Haku-BP ~ % /Users/mac/Applications/mongodb/bin/mongod --dbpath=/Users/mac/Applications/mongodb-data
+*/
