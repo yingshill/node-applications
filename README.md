@@ -21,5 +21,8 @@ Use npm package **request** to fetch real-time weather data from Dark Sky API an
 
 Use **Express** to serve up the website and JSON data and enable users to interact with app to retrieve real-time weather data via the broswer. Furthermore, , we use npm **Handlerbars** package to render dynamicc pages with templating.
 
+![IMG_2524](https://user-images.githubusercontent.com/59033321/198153715-21cbf727-cd6f-44ab-9a46-44c114421647.JPG)
+
+
 
 
